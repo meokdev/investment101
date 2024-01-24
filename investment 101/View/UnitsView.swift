@@ -30,73 +30,107 @@ struct Topic: Identifiable, Hashable {
     let name: String
     let articleURL: URL // HTML file path in Downloads folder without extension
     let questions: [Question]
+    let img_id: String
 }
 
-struct UnitsView: View {
 
-    let unitview: [String: [Topic]] = [
-        K.unit1: [
-            Topic(id: 1, name: K.topic11, articleURL: K.article11URL, questions: K.quiz11),
-            Topic(id: 2, name: K.topic12, articleURL: K.article12URL, questions: K.quiz12),
-            Topic(id: 3, name: K.topic21, articleURL: K.article21URL, questions: K.quiz21),
-            Topic(id: 4, name: K.topic22, articleURL: K.article22URL, questions: K.quiz22),
-            Topic(id: 5, name: K.topic23, articleURL: K.article23URL, questions: K.quiz23),
-            Topic(id: 6, name: K.topic24, articleURL: K.article24URL, questions: K.quiz24)
-        ]
-    ]
+class Globalvar: ObservableObject {
+    @Published var unlockedTopicIDs: [Int]
     
+    init() {
+        self.unlockedTopicIDs = UserDefaults.unlockedTopicIDs.isEmpty ? [1] : UserDefaults.unlockedTopicIDs
+    }
+}
+
+
+struct UnitsView: View {
     
     let units: [String: [Topic]] = [
         K.unit1: [
-            Topic(id: 1, name: K.topic11, articleURL: K.article11URL, questions: K.quiz11),
-            Topic(id: 2, name: K.topic12, articleURL: K.article12URL, questions: K.quiz12)
+            Topic(id: 1, name: K.topic11, articleURL: K.article11URL, questions: K.quiz11, img_id: "img1"),
+            Topic(id: 2, name: K.topic12, articleURL: K.article12URL, questions: K.quiz12, img_id: "img2")
         ],
         K.unit2: [
-            Topic(id: 3, name: K.topic21, articleURL: K.article21URL, questions: K.quiz21),
-            Topic(id: 4, name: K.topic22, articleURL: K.article22URL, questions: K.quiz22),
-            Topic(id: 5, name: K.topic23, articleURL: K.article23URL, questions: K.quiz23),
-            Topic(id: 6, name: K.topic24, articleURL: K.article24URL, questions: K.quiz24)
+            Topic(id: 3, name: K.topic21, articleURL: K.article21URL, questions: K.quiz21, img_id: "img3"),
+            Topic(id: 4, name: K.topic22, articleURL: K.article22URL, questions: K.quiz22, img_id: "img4"),
+            Topic(id: 5, name: K.topic23, articleURL: K.article23URL, questions: K.quiz23, img_id: "img5"),
+            Topic(id: 6, name: K.topic24, articleURL: K.article24URL, questions: K.quiz24, img_id: "img6")
         ]
-        // Add more units here
+            // Add more units here
     ]
-
     var body: some View {
-        var progress: Int = UserDefaults.standard.integer(forKey: "userprogress")
-        
         VStack {
-            
-            Text("Units \(progress)")
-                .font(.largeTitle)
+            Text("Units")
+                .font(.title)
+                .bold()
                 .padding(.all)
-            
+                
             List {
-                if let topics = unitview[K.unit1] {
-                    ForEach(topics.prefix(progress), id: \.id) { topic in
-                        NavigationLink(destination: TopicDetailView(topic: topic)) {
-                            Text(topic.name)
+                ForEach(units.keys.sorted(), id: \.self) { unit in
+                    
+                    Section(header: Text(unit).bold()) {
+                        ForEach(units[unit]!, id: \.id) { topic in
+                            TopicItemView(topic: topic)
                         }
+                        
                     }
                 }
-                
             }
-            
-//            List {
-//                ForEach(units.keys.sorted(), id: \.self) { unit in
-//                    Section(header: Text(unit)) {
-//                        ForEach(units[unit]!, id: \.id) { topic in
-//                            NavigationLink(destination: TopicDetailView(topic: topic)) {
-//                                Text(topic.name)
-//                            }
-//                        }
-//                    }
-//                }
-//            }
             .listStyle(GroupedListStyle())
-            .navigationBarHidden(true) // Hide the navigation bar
+            .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
         }
     }
 }
+
+    
+struct TopicItemView: View {
+    var topic: Topic // Replace TopicType with your actual type
+     // Whether the topic is unlocked
+    
+    @State var unlockedTopicIDs: [Int] = UserDefaults.unlockedTopicIDs.isEmpty ? [1] : UserDefaults.unlockedTopicIDs
+    
+    var body: some View {
+        HStack{ //hstack for desc and lock
+            
+            NavigationLink(destination: TopicDetailView(topic: topic)) {
+                HStack {
+                    let img = topic.img_id
+                    Image(img)
+                        .resizable()
+                        .frame(width:80, height:80)
+                        .cornerRadius(10)
+                    Spacer()
+                    VStack(alignment: .leading){
+                        Spacer()
+                        Text(topic.name)
+                            .font(.system(.title3, design: .rounded))
+                            .bold()
+                        if unlockedTopicIDs.contains(topic.id) {
+                            Text("Unlocked") // Unlocked
+
+                        } else {
+                            Text("Locked") // Locked
+                                .italic()
+                        }
+                        Spacer()
+                    }
+                    Spacer()
+                    if unlockedTopicIDs.contains(topic.id) {
+                        Image(systemName: "lock.open.fill") // Unlocked
+                    } else {
+                        Image(systemName: "lock.fill") // Locked
+                    }
+                }
+                .foregroundColor(unlockedTopicIDs.contains(topic.id) ? .primary : .secondary)
+            }
+            .disabled(!unlockedTopicIDs.contains(topic.id))
+        }
+    }
+}
+
+
+
 
 
 

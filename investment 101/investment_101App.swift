@@ -11,6 +11,7 @@ import SwiftUI
 struct investment_101App: App {
     let persistenceController = PersistenceController.shared
 
+    @StateObject var globalVar = Globalvar()
     var body: some Scene {
         WindowGroup {
             StartView()
@@ -18,6 +19,7 @@ struct investment_101App: App {
         }
     }
 }
+
 
 
 
