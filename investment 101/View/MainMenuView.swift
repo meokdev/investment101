@@ -14,7 +14,7 @@ struct MainMenuView: View {
     var body: some View {
         
         TabView(selection: $selectedTab) {
-            // First View - Profile
+            //courses
             NavigationStack{
                 UnitsView()
         
@@ -28,7 +28,7 @@ struct MainMenuView: View {
             }
             
             .tag(0)
-            
+            //stockview
             NavigationStack{
                 redirectview()
                     .onAppear()
@@ -43,8 +43,8 @@ struct MainMenuView: View {
             }
                 
             .tag(1)
-
-            ProfileView()
+            //profile view
+            profile2()
                 .tabItem {
                     Image(systemName: "person.fill")
                     Text("Profile")

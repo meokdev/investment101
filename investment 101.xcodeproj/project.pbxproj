@@ -16,7 +16,7 @@
 		27FE1E632B2ABB7000472FA0 /* investment_101.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27FE1E612B2ABB7000472FA0 /* investment_101.xcdatamodeld */; };
 		27FE1E6A2B2ABC1300472FA0 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FE1E692B2ABC1300472FA0 /* MainMenuView.swift */; };
 		27FE1E6C2B2ABC3800472FA0 /* NoQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FE1E6B2B2ABC3800472FA0 /* NoQuizView.swift */; };
-		27FE1E6E2B2ABC4B00472FA0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FE1E6D2B2ABC4A00472FA0 /* ProfileView.swift */; };
+		27FE1E6E2B2ABC4B00472FA0 /* ProfileViewOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FE1E6D2B2ABC4A00472FA0 /* ProfileViewOld.swift */; };
 		27FE1E702B2ABC5E00472FA0 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FE1E6F2B2ABC5E00472FA0 /* QuizView.swift */; };
 		27FE1E722B2ABC7E00472FA0 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FE1E712B2ABC7D00472FA0 /* QuizViewModel.swift */; };
 		27FE1E742B2ABCB200472FA0 /* TopicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FE1E732B2ABCB200472FA0 /* TopicDetailView.swift */; };
@@ -62,6 +62,10 @@
 		360164642B5FD4C900F11E5E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360164452B5FD4C900F11E5E /* Utils.swift */; };
 		3601649B2B5FF4C600F11E5E /* redirectview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3601649A2B5FF4C600F11E5E /* redirectview.swift */; };
 		362E95412B60B7D50015E777 /* tutorialpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E95402B60B7D50015E777 /* tutorialpage.swift */; };
+		363425DB2B614B560070D1B3 /* fancyprofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363425D72B614B560070D1B3 /* fancyprofile.swift */; };
+		363425DC2B614B560070D1B3 /* SocialMediaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363425D82B614B560070D1B3 /* SocialMediaListView.swift */; };
+		363425DD2B614B560070D1B3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363425D92B614B560070D1B3 /* MapView.swift */; };
+		363425E42B6151EB0070D1B3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363425DF2B6151EB0070D1B3 /* SettingsView.swift */; };
 		36B709242B5FD18A0046C781 /* XCAStocksAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 36B709232B5FD18A0046C781 /* XCAStocksAPI */; };
 		36B709262B5FD18A0046C781 /* XCAStocksExec in Frameworks */ = {isa = PBXBuildFile; productRef = 36B709252B5FD18A0046C781 /* XCAStocksExec */; };
 		36CF75712B60CCD800EECE3A /* stocktutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF75702B60CCD800EECE3A /* stocktutorial.swift */; };
@@ -80,7 +84,7 @@
 		27FE1E622B2ABB7000472FA0 /* investment_101.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = investment_101.xcdatamodel; sourceTree = "<group>"; };
 		27FE1E692B2ABC1300472FA0 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		27FE1E6B2B2ABC3800472FA0 /* NoQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoQuizView.swift; sourceTree = "<group>"; };
-		27FE1E6D2B2ABC4A00472FA0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		27FE1E6D2B2ABC4A00472FA0 /* ProfileViewOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewOld.swift; sourceTree = "<group>"; };
 		27FE1E6F2B2ABC5E00472FA0 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		27FE1E712B2ABC7D00472FA0 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		27FE1E732B2ABCB200472FA0 /* TopicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetailView.swift; sourceTree = "<group>"; };
@@ -126,6 +130,10 @@
 		360164452B5FD4C900F11E5E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3601649A2B5FF4C600F11E5E /* redirectview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redirectview.swift; sourceTree = "<group>"; };
 		362E95402B60B7D50015E777 /* tutorialpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tutorialpage.swift; sourceTree = "<group>"; };
+		363425D72B614B560070D1B3 /* fancyprofile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fancyprofile.swift; sourceTree = "<group>"; };
+		363425D82B614B560070D1B3 /* SocialMediaListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaListView.swift; sourceTree = "<group>"; };
+		363425D92B614B560070D1B3 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		363425DF2B6151EB0070D1B3 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		36CF75702B60CCD800EECE3A /* stocktutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stocktutorial.swift; sourceTree = "<group>"; };
 		36CF75722B60CD3300EECE3A /* coursestutorialview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coursestutorialview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,11 +199,12 @@
 				272DFD712B5A0C3900DF5DEF /* StartView.swift */,
 				272DFD6E2B5A071500DF5DEF /* SplashScreenView.swift */,
 				27FE1E692B2ABC1300472FA0 /* MainMenuView.swift */,
+				27FE1E752B2ABCCA00472FA0 /* UnitsView.swift */,
 				362E95402B60B7D50015E777 /* tutorialpage.swift */,
 				3601649A2B5FF4C600F11E5E /* redirectview.swift */,
-				27FE1E6D2B2ABC4A00472FA0 /* ProfileView.swift */,
+				27FE1E6D2B2ABC4A00472FA0 /* ProfileViewOld.swift */,
+				363425D52B614B460070D1B3 /* profile-detail */,
 				27FE1E792B2ABD1D00472FA0 /* ProfileViewModel.swift */,
-				27FE1E752B2ABCCA00472FA0 /* UnitsView.swift */,
 				27FE1E732B2ABCB200472FA0 /* TopicDetailView.swift */,
 				27FE1E772B2ABCEC00472FA0 /* WebViewManager.swift */,
 				362E953F2B60AD690015E777 /* Quiz */,
@@ -331,6 +340,27 @@
 			path = "investment 101/View/Quiz";
 			sourceTree = SOURCE_ROOT;
 		};
+		363425D52B614B460070D1B3 /* profile-detail */ = {
+			isa = PBXGroup;
+			children = (
+				363425DE2B6151D70070D1B3 /* profile-settings */,
+				363425D72B614B560070D1B3 /* fancyprofile.swift */,
+				363425D92B614B560070D1B3 /* MapView.swift */,
+				363425D82B614B560070D1B3 /* SocialMediaListView.swift */,
+			);
+			name = "profile-detail";
+			path = "investment 101/View/profile-detail";
+			sourceTree = SOURCE_ROOT;
+		};
+		363425DE2B6151D70070D1B3 /* profile-settings */ = {
+			isa = PBXGroup;
+			children = (
+				363425DF2B6151EB0070D1B3 /* SettingsView.swift */,
+			);
+			name = "profile-settings";
+			path = "investment 101/View/profile-detail/profile-settings";
+			sourceTree = SOURCE_ROOT;
+		};
 		36CF756F2B60CCC300EECE3A /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,9 +460,12 @@
 				3601645F2B5FD4C900F11E5E /* StockTickerView.swift in Sources */,
 				27FE1E742B2ABCB200472FA0 /* TopicDetailView.swift in Sources */,
 				3601649B2B5FF4C600F11E5E /* redirectview.swift in Sources */,
+				363425DD2B614B560070D1B3 /* MapView.swift in Sources */,
+				363425DC2B614B560070D1B3 /* SocialMediaListView.swift in Sources */,
 				272DFD6F2B5A071500DF5DEF /* SplashScreenView.swift in Sources */,
 				272DFD722B5A0C3900DF5DEF /* StartView.swift in Sources */,
 				27FE1E7C2B2ABF6200472FA0 /* EndOfQuizView.swift in Sources */,
+				363425DB2B614B560070D1B3 /* fancyprofile.swift in Sources */,
 				27FE1E6A2B2ABC1300472FA0 /* MainMenuView.swift in Sources */,
 				3601644A2B5FD4C900F11E5E /* ChartViewData.swift in Sources */,
 				360164512B5FD4C900F11E5E /* MockTickerListRepository.swift in Sources */,
@@ -468,7 +501,8 @@
 				360164622B5FD4C900F11E5E /* Quote+Extensions.swift in Sources */,
 				360164562B5FD4C900F11E5E /* SearchView.swift in Sources */,
 				27FE1E8E2B2AC33400472FA0 /* Constants.swift in Sources */,
-				27FE1E6E2B2ABC4B00472FA0 /* ProfileView.swift in Sources */,
+				363425E42B6151EB0070D1B3 /* SettingsView.swift in Sources */,
+				27FE1E6E2B2ABC4B00472FA0 /* ProfileViewOld.swift in Sources */,
 				36CF75732B60CD3300EECE3A /* coursestutorialview.swift in Sources */,
 				27FE1E572B2ABB6E00472FA0 /* investment_101App.swift in Sources */,
 				360164592B5FD4C900F11E5E /* ErrorStateView.swift in Sources */,
