@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2756BDA42B5A487D00645CB3 /* SpalshScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756BDA32B5A487D00645CB3 /* SpalshScreenView.swift */; };
-		2756BDA62B5A48A400645CB3 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756BDA52B5A48A400645CB3 /* StartView.swift */; };
+		272DFD6F2B5A071500DF5DEF /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272DFD6E2B5A071500DF5DEF /* SplashScreenView.swift */; };
+		272DFD722B5A0C3900DF5DEF /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272DFD712B5A0C3900DF5DEF /* StartView.swift */; };
 		27FE1E572B2ABB6E00472FA0 /* investment_101App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FE1E562B2ABB6E00472FA0 /* investment_101App.swift */; };
 		27FE1E5B2B2ABB7000472FA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FE1E5A2B2ABB7000472FA0 /* Assets.xcassets */; };
 		27FE1E5E2B2ABB7000472FA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FE1E5D2B2ABB7000472FA0 /* Preview Assets.xcassets */; };
@@ -34,8 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2756BDA32B5A487D00645CB3 /* SpalshScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpalshScreenView.swift; sourceTree = "<group>"; };
-		2756BDA52B5A48A400645CB3 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		272DFD6E2B5A071500DF5DEF /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		272DFD702B5A0A8200DF5DEF /* investment-101-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "investment-101-Info.plist"; sourceTree = SOURCE_ROOT; };
+		272DFD712B5A0C3900DF5DEF /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		27FE1E532B2ABB6E00472FA0 /* investment 101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "investment 101.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FE1E562B2ABB6E00472FA0 /* investment_101App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = investment_101App.swift; sourceTree = "<group>"; };
 		27FE1E5A2B2ABB7000472FA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,8 +92,8 @@
 		27FE1E552B2ABB6E00472FA0 /* investment 101 */ = {
 			isa = PBXGroup;
 			children = (
+				272DFD702B5A0A8200DF5DEF /* investment-101-Info.plist */,
 				27FE1E562B2ABB6E00472FA0 /* investment_101App.swift */,
-				2756BDA52B5A48A400645CB3 /* StartView.swift */,
 				27FE1E7D2B2AC09C00472FA0 /* View */,
 				27FE1E5A2B2ABB7000472FA0 /* Assets.xcassets */,
 				27FE1E8D2B2AC33400472FA0 /* Constants.swift */,
@@ -115,11 +116,12 @@
 		27FE1E7D2B2AC09C00472FA0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2756BDA32B5A487D00645CB3 /* SpalshScreenView.swift */,
+				272DFD712B5A0C3900DF5DEF /* StartView.swift */,
 				27FE1E692B2ABC1300472FA0 /* MainMenuView.swift */,
-				27FE1E752B2ABCCA00472FA0 /* UnitsView.swift */,
+				272DFD6E2B5A071500DF5DEF /* SplashScreenView.swift */,
 				27FE1E6D2B2ABC4A00472FA0 /* ProfileView.swift */,
 				27FE1E792B2ABD1D00472FA0 /* ProfileViewModel.swift */,
+				27FE1E752B2ABCCA00472FA0 /* UnitsView.swift */,
 				27FE1E732B2ABCB200472FA0 /* TopicDetailView.swift */,
 				27FE1E6F2B2ABC5E00472FA0 /* QuizView.swift */,
 				27FE1E712B2ABC7D00472FA0 /* QuizViewModel.swift */,
@@ -221,12 +223,12 @@
 			files = (
 				27FE1E6C2B2ABC3800472FA0 /* NoQuizView.swift in Sources */,
 				27FE1E742B2ABCB200472FA0 /* TopicDetailView.swift in Sources */,
+				272DFD6F2B5A071500DF5DEF /* SplashScreenView.swift in Sources */,
+				272DFD722B5A0C3900DF5DEF /* StartView.swift in Sources */,
 				27FE1E7C2B2ABF6200472FA0 /* EndOfQuizView.swift in Sources */,
-				2756BDA62B5A48A400645CB3 /* StartView.swift in Sources */,
 				27FE1E6A2B2ABC1300472FA0 /* MainMenuView.swift in Sources */,
 				27FE1E602B2ABB7000472FA0 /* Persistence.swift in Sources */,
 				27FE1E722B2ABC7E00472FA0 /* QuizViewModel.swift in Sources */,
-				2756BDA42B5A487D00645CB3 /* SpalshScreenView.swift in Sources */,
 				27FE1E632B2ABB7000472FA0 /* investment_101.xcdatamodeld in Sources */,
 				27FE1E782B2ABCEC00472FA0 /* WebViewManager.swift in Sources */,
 				27FE1E762B2ABCCA00472FA0 /* UnitsView.swift in Sources */,
@@ -366,6 +368,7 @@
 				DEVELOPMENT_TEAM = HPU2K37CYY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "investment-101-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -376,7 +379,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "celinetsai.investment-101";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -399,6 +402,7 @@
 				DEVELOPMENT_TEAM = HPU2K37CYY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "investment-101-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -409,7 +413,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "celinetsai.investment-101";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

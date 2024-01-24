@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct QuizView: View {
-    
-    
-    
     let questions: [Question]
+    let currentID: Int
     @ObservedObject private var viewModel = QuizViewModel()
     @Binding var isQuizButtonClicked: Bool
     @State private var xpPoints = UserDefaults.standard.integer(forKey: "XP")
@@ -20,11 +18,12 @@ struct QuizView: View {
     @State private var userAnswers: [String] = []
     @State private var shouldPresentEndOfQuiz = false
     @Environment(\.presentationMode) var presentationMode
-
     @State private var shuffledAnswerIndices: [Int] = []
+
+    
     var body: some View {
         if questions.isEmpty {
-            NoQuizView()
+            NoQuizView(nextTopicID: currentID + 1)
         } else {
             content
         }
@@ -103,7 +102,7 @@ struct QuizView: View {
             .navigationBarItems(leading: backButton)
             .navigationBarTitle("", displayMode: .inline)
             .background(
-                NavigationLink(destination: EndOfQuizView(questions: questions, userAnswers: userAnswers), isActive: $shouldPresentEndOfQuiz) {
+                NavigationLink(destination: EndOfQuizView(questions: questions, userAnswers: userAnswers, nextTopicID: (currentID + 1)), isActive: $shouldPresentEndOfQuiz) {
                     EmptyView()
                 }
             )
@@ -220,6 +219,4 @@ struct QuizView: View {
         let xp = Int(rightAnswer.count)*5
         return xp
     }
-    
-    
 }

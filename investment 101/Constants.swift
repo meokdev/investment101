@@ -29,6 +29,10 @@ struct K {
     static let topic23 = "Evaluating Company Financials: Balance Sheet"
     static let topic24 = "Evaluating Company Financials: Cash Flow Statement"
     
+    static let testdesc = "testdescription"
+    
+    
+    
     static let quiz11 = [
         Question(q: "What is the primary function of the stock market?", a: ["Facilitating the transfer of ownership in publicly traded companies", "Providing a platform for companies to raise debt capital", "Allowing investors to participate in private equity investments", "Facilitating the trading the commodities and futures"], correctAnswer: "Facilitating the transfer of ownership in publicly traded companies"),
         Question(q: "Why is the stock market important for wealth creation?", a: ["It provides a platform for companies to raise capital for growth", "It allows investors to generate wealth through stock price appreciation and dividends", "It promotes transparency and accountability in corporate governance", "It offers opportunities for short-term speculation and high-risk investments"], correctAnswer: "It allows investors to generate wealth through stock price appreciation and dividends"),

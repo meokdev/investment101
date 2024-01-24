@@ -33,7 +33,7 @@ struct TopicDetailView: View {
             }
             .fullScreenCover(isPresented: $isQuizButtonClicked) {
                 NavigationView {
-                    QuizView(questions: topic.questions, isQuizButtonClicked: $isQuizButtonClicked)
+                    QuizView(questions: topic.questions, currentID: topic.id, isQuizButtonClicked: $isQuizButtonClicked)
                         .navigationBarTitle("Quiz", displayMode: .inline)
                         .navigationBarItems(leading: Button("Back") {
                             isQuizButtonClicked = false
@@ -97,7 +97,7 @@ struct WebView: UIViewRepresentable {
 
 struct TopicDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        let sampleTopic = Topic(id: 3, name: K.unit3, articleURL: K.article21URL, questions: K.quiz21)
+        let sampleTopic = Topic(id: 3, name: K.unit3, articleURL: K.article21URL, questions: K.quiz21, img_id: "img1")
         return TopicDetailView(topic: sampleTopic)
     }
 }

@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct NoQuizView: View {
+    @State private var navigateToMainMenu = false
+    @ObservedObject private var viewModel = QuizViewModel()
+    let nextTopicID: Int
     
     var body: some View {
-        
         NavigationView {
             ZStack {
                 Color.white.ignoresSafeArea() // Set white background
@@ -21,7 +23,15 @@ struct NoQuizView: View {
                         .foregroundColor(.black)
                         .padding(.vertical, 60)
                     
-                    NavigationLink(destination: MainMenuView()) {
+                    NavigationLink(destination: MainMenuView(), isActive: $navigateToMainMenu) {
+                        EmptyView()
+                    }
+                    .hidden()
+                    
+                    Button(action: {
+                        navigateToMainMenu = true
+                        viewModel.updateUnlockedTopicIDs(nextTopicID)
+                    }) {
                         Text("Done")
                             .foregroundColor(.white) // Set text color to white
                             .font(.title)
@@ -29,11 +39,9 @@ struct NoQuizView: View {
                             .frame(width: 200, height: 50)
                             .background(Color.blue) // Set background color to blue
                             .cornerRadius(10) // Add corner radius
-                            
                     }
                 }
             }
-            
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
@@ -41,9 +49,3 @@ struct NoQuizView: View {
 }
 
 
-
-struct NoQuizView_Previews: PreviewProvider {
-    static var previews: some View {
-        NoQuizView()
-    }
-}

@@ -8,32 +8,25 @@
 import SwiftUI
 
 struct EndOfQuizView: View {
-    
-    func addprogress() {
-        var currentprogress = UserDefaults.standard.integer(forKey: "userprogress")
-        currentprogress += 1
-
-        // Set the updated value back into UserDefaults
-        UserDefaults.standard.set(currentprogress, forKey: "userprogress")
-    }
-    
     let questions: [Question]
     let userAnswers: [String]
-    
+    let nextTopicID: Int
     @Environment(\.presentationMode) var presentationMode
-    
+    @ObservedObject private var viewModel = QuizViewModel()
+
+    @State private var isCheckingAnswers = false
+    @State private var shouldNavigateToMainMenu = false // New state for navigation
+
     var score: Double {
         let rightAnswer = zip(questions, userAnswers).filter { $0.0.rightAnswer == $0.1 }
         let percentage = Double(rightAnswer.count) / Double(questions.count) * 100
         return percentage
     }
+
     var resultMessage: String {
-        
-        
-        
         if score >= 80 {
             return "Amazing! Good work!"
-        } else if score >= 65 {
+        } else if score >= 50 {
             return "Great job!"
         } else if score >= 20 {
             return "Keep practicing!"
@@ -42,12 +35,8 @@ struct EndOfQuizView: View {
         }
     }
 
-
-    @State private var isCheckingAnswers = false
-
     var body: some View {
         VStack {
-            
             Text(resultMessage)
                 .font(.title)
                 .padding()
@@ -55,13 +44,14 @@ struct EndOfQuizView: View {
             Text("Your Score: \(score, specifier: "%.0f")%")
                 .font(.headline)
                 .padding()
-            
+
             Text("XP: \(UserDefaults.xpPoints)")
 
             Spacer()
 
             Button(action: {
                 isCheckingAnswers = true // Set the flag to show the CheckAnswersView
+                
             }) {
                 Text("Check Answers")
                     .font(.headline)
@@ -74,7 +64,19 @@ struct EndOfQuizView: View {
             }
             .padding(.vertical, -5)
 
-            NavigationLink(destination: MainMenuView()) {
+            // Use NavigationLink conditionally based on shouldNavigateToMainMenu
+            NavigationLink(destination: MainMenuView(), isActive: $shouldNavigateToMainMenu) {
+                EmptyView()
+            }
+            .hidden() // Hide the link
+
+            Button(action: {
+                shouldNavigateToMainMenu = true
+                if score > 65 {
+                    viewModel.updateUnlockedTopicIDs(nextTopicID)
+                }
+                // Activate the NavigationLink
+            }) {
                 Text("Return Home")
                     .font(.headline)
                     .foregroundColor(.white)
@@ -87,13 +89,8 @@ struct EndOfQuizView: View {
             }
             .padding(.bottom, 5)
         }
-        .onAppear {
-            if score > 65 {
-                addprogress()
-            }
-        }
         .navigationBarHidden(true)
-        .navigationBarBackButtonHidden(true) // Hide the back button
+        .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: EmptyView())
         .sheet(isPresented: $isCheckingAnswers) {
             CheckAnswersView(questions: questions, userAnswers: userAnswers)
@@ -137,11 +134,3 @@ struct CheckAnswersView: View {
 
 
 
-struct EndOfQuizView_Previews: PreviewProvider {
-    static var previews: some View {
-        let questions = K.quiz11
-        let userAnswers: [String] = ["Answer 1", "Answer 2", "Answer 3", "Answer 4", "Answer 5", "Answer 6"]
-        
-        EndOfQuizView(questions: questions, userAnswers: userAnswers)
-    }
-}
