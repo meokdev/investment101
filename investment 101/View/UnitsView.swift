@@ -60,11 +60,8 @@ struct UnitsView: View {
     ]
     var body: some View {
         VStack {
-            Text("Units")
-                .font(.title)
-                .bold()
-                .padding(.all)
-                
+            topbar_1() //2 different topbar() and topbar_1() for variation.
+            
             List {
                 ForEach(units.keys.sorted(), id: \.self) { unit in
                     
@@ -82,6 +79,40 @@ struct UnitsView: View {
         }
     }
 }
+
+struct topbar_1: View{
+    var body: some View{
+        HStack{
+            Image("inapp_icon")
+                .resizable()
+                .frame(width:60, height:60)
+            
+        }
+    }
+}
+
+struct topbar: View{
+    var body: some View{
+        HStack{
+            Image("inapp_icon")
+                .resizable()
+                .frame(width:60, height:60)
+            Spacer()
+            VStack(alignment: .leading){
+                Text("Units")
+                    .font(.title)
+                    .bold()
+                    .padding(.all)
+            }
+            Spacer()
+            Image("")
+                .resizable()
+                .frame(width:60, height:60)
+            
+        }
+    }
+}
+
 
     
 struct TopicItemView: View {
