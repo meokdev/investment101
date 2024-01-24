@@ -1,9 +1,4 @@
-//
-//  StartView.swift
-//  investment 101
-//
-//  Created by Celine Tsai on 19/1/24.
-//
+
 
 import SwiftUI
 

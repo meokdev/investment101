@@ -1,10 +1,3 @@
-//
-//  WebViewManager.swift
-//  investment 101
-//
-//  Created by Celine Tsai on 10/8/23.
-//
-
 import WebKit
 import SwiftUI
 
@@ -39,5 +32,15 @@ class WebViewManager: NSObject, ObservableObject, WKScriptMessageHandler {
                 print("Error sending HTML message: \(error)")
             }
         }
+    }
+    
+    func loadURLString(_ urlString: String) {
+        guard let url = URL(string: urlString) else {
+            print("Invalid URL string: \(urlString)")
+            return
+        }
+
+        let request = URLRequest(url: url)
+        webView?.load(request)
     }
 }

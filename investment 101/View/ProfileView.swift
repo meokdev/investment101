@@ -1,9 +1,3 @@
-//
-//  ProfileView.swift
-//  investment 101
-//
-//  Created by Celine Tsai on 25/7/23.
-//
 
 import SwiftUI
 
@@ -19,6 +13,7 @@ struct ProfileView: View {
 
     var body: some View {
         NavigationView {
+            
             ZStack(alignment: .topTrailing) {
                 VStack(spacing: 16) {
                     Button(action: {

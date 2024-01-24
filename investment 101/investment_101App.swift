@@ -7,15 +7,30 @@
 
 import SwiftUI
 
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        // Override dark mode for the entire app
+        UIWindow.appearance().overrideUserInterfaceStyle = .light
+        UserDefaults.standard.register(defaults: ["hasViewedCourseWalkthrough": false])
+        return true
+    }
+}
+
 @main
 struct investment_101App: App {
     let persistenceController = PersistenceController.shared
-
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
+    
+    @StateObject var appVM = AppViewModel()
     @StateObject var globalVar = Globalvar()
     var body: some Scene {
         WindowGroup {
-            StartView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NavigationStack{
+                StartView()
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }
+            .environmentObject(appVM)
         }
     }
 }

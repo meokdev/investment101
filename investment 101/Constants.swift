@@ -103,14 +103,19 @@ struct K {
 
     static let article11path = Bundle.main.path(forResource: "article11", ofType: "html")
     static let article11URL = URL(fileURLWithPath: article11path!)
+    
     static let article12path = Bundle.main.path(forResource: "article12", ofType: "html")
     static let article12URL = URL(fileURLWithPath: article12path!)
+    
     static let article21path = Bundle.main.path(forResource: "article21", ofType: "html")
     static let article21URL = URL(fileURLWithPath: article21path!)
+    
     static let article22path = Bundle.main.path(forResource: "article22", ofType: "html")
     static let article22URL = URL(fileURLWithPath: article22path!)
+    
     static let article23path = Bundle.main.path(forResource: "article23", ofType: "html")
     static let article23URL = URL(fileURLWithPath: article23path!)
+    
     static let article24path = Bundle.main.path(forResource: "article24", ofType: "html")
     static let article24URL = URL(fileURLWithPath: article24path!)
 
