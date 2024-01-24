@@ -11,15 +11,11 @@ import SwiftUI
 struct investment_101App: App {
     let persistenceController = PersistenceController.shared
 
-    @StateObject var appVM = AppViewModel()
     @StateObject var globalVar = Globalvar()
     var body: some Scene {
         WindowGroup {
-            NavigationStack{
-                StartView()
-                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            }
-            .environmentObject(appVM)
+            StartView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
