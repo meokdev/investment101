@@ -23,6 +23,7 @@ struct SettingsView: View {
                 trailing:
                     Button (
                         action: {
+                            HapticManager.shared.softFeedback()
                             self.presentationMode.wrappedValue.dismiss()
                         },
                         label: {
@@ -50,6 +51,7 @@ struct ProfileSettings: View {
             
             Button (
                 action: {
+                    HapticManager.shared.hardFeedback()
                     // Action
                 },
                 label: {

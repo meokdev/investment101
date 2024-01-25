@@ -18,6 +18,7 @@ struct DateRangePickerView: View {
             HStack(spacing: 16) {
                 ForEach(self.rangeTypes) { dateRange in
                     Button {
+                        HapticManager.shared.hardFeedback()
                         self.selectedRange = dateRange
                     } label: {
                         Text(dateRange.title)

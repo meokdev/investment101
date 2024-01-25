@@ -181,6 +181,7 @@ struct StockTickerView: View {
     
     private var closeButton: some View {
         Button {
+            HapticManager.shared.rigidFeedback()
             dismiss()
         } label: {
             Circle()

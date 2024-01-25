@@ -34,6 +34,7 @@ struct SocialMediaListView: View {
                         Text("\(acc.username)")
                             .font(.subheadline)
                         Button(action: {
+                            HapticManager.shared.hardFeedback()
                             if let url = URL(string: acc.url) {
                                 UIApplication.shared.open(url)
                             }

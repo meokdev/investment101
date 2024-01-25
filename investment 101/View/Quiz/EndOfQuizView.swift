@@ -68,6 +68,7 @@ struct EndOfQuizView: View {
             NavigationLink(destination: MainMenuView(), isActive: $shouldNavigateToMainMenu) {
                 EmptyView()
             }
+            .navigationBarBackButtonHidden(true)
             .hidden() // Hide the link
 
             Button(action: {

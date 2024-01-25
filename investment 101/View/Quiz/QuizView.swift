@@ -64,6 +64,7 @@ struct QuizView: View {
                 // Answer choices
                 ForEach(shuffledAnswerIndices, id: \.self) { index in
                     Button(action: {
+                        HapticManager.shared.mediumFeedback()
                         selectAnswer(index)
                     }) {
                         Text(questions[currentQuestionIndex].answers[index])
@@ -83,6 +84,7 @@ struct QuizView: View {
 
                 // Confirm button
                 Button(action: {
+                    HapticManager.shared.hardFeedback()
                     nextQuestion()
                 }) {
                     Text("Confirm")
@@ -118,6 +120,7 @@ struct QuizView: View {
 
     private var backButton: some View {
         Button(action: {
+            HapticManager.shared.mediumFeedback()
             confirmGoBack()
         }) {
             Image(systemName: "chevron.left")

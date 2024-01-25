@@ -87,14 +87,20 @@ struct SplashScreenView: View {
     private func startTypingAnimation() {
         let totalCharacters = quote.count
         var currentIndex = 0
-
+        let hapticInterval = 3
+        
+        
         typingTimer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { timer in
             if currentIndex < totalCharacters {
                 let index = quote.index(quote.startIndex, offsetBy: currentIndex)
                 displayedText += String(quote[index])
                 currentIndex += 1
+                if currentIndex % hapticInterval == 0 {
+                    HapticManager.shared.rigidFeedback()
+                }
                 loadingProgress = Double(currentIndex) / Double(totalCharacters)
             } else {
+                HapticManager.shared.hardFeedback()
                 timer.invalidate()
                 showAuthor = true
                 loadingProgress = 1

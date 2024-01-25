@@ -9,7 +9,6 @@ import SwiftUI
 
 struct StockTutorialView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var hasViewedCourseWalkthrough: Bool
     
     @State private var currentPage = 0
     
@@ -17,9 +16,9 @@ struct StockTutorialView: View {
     let pageSubHeadings = [ "Dive into the world of stock market data visualization and learn how to decipher the intricate details of stock prices, trends, and performance.","Discover how to analyze key stock market metrics displayed on our platform, from real-time stock prices to historical data, helping you make informed investment decisions.", "Gain valuable insights into the stock market with our intuitive display features. Explore advanced charts, live trading data, and more, empowering you to stay ahead in your investment journey."
                             ]
     let pageImages = [ "stock-tutorial-1", "stock-tutorial-2", "stock-tutorial-3" ]
-    
     init() {
-        self._hasViewedCourseWalkthrough = State(initialValue: UserDefaults.standard.bool(forKey: "hasViewedCourseWalkthrough"))
+        
+
         UIPageControl.appearance().currentPageIndicatorTintColor = .gray
         UIPageControl.appearance().pageIndicatorTintColor = .lightGray
     }
@@ -38,10 +37,13 @@ struct StockTutorialView: View {
             
             VStack(spacing: 20) {
                 Button(action: {
+                    HapticManager.shared.mediumFeedback()
+
                     if currentPage < pageHeadings.count - 1 {
                         currentPage += 1
                     } else {
                         UserDefaults.standard.set(true, forKey: "hasViewedStockWalkthrough")
+
                         dismiss()
                     }
                 }) {
@@ -58,6 +60,8 @@ struct StockTutorialView: View {
                     
                     Button(action: {
                         UserDefaults.standard.set(true, forKey: "hasViewedStockWalkthrough")
+
+                        HapticManager.shared.rigidFeedback()
                         dismiss()
                     }) {
                         

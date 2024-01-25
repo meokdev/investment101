@@ -61,6 +61,7 @@
 		360164632B5FD4C900F11E5E /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360164442B5FD4C900F11E5E /* Foundation+Extensions.swift */; };
 		360164642B5FD4C900F11E5E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360164452B5FD4C900F11E5E /* Utils.swift */; };
 		3601649B2B5FF4C600F11E5E /* redirectview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3601649A2B5FF4C600F11E5E /* redirectview.swift */; };
+		3626BAAC2B621E0800D6684C /* hapticmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3626BAAB2B621E0800D6684C /* hapticmanager.swift */; };
 		362E95412B60B7D50015E777 /* tutorialpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E95402B60B7D50015E777 /* tutorialpage.swift */; };
 		363425DB2B614B560070D1B3 /* fancyprofile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363425D72B614B560070D1B3 /* fancyprofile.swift */; };
 		363425DC2B614B560070D1B3 /* SocialMediaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363425D82B614B560070D1B3 /* SocialMediaListView.swift */; };
@@ -129,6 +130,7 @@
 		360164442B5FD4C900F11E5E /* Foundation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Extensions.swift"; sourceTree = "<group>"; };
 		360164452B5FD4C900F11E5E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3601649A2B5FF4C600F11E5E /* redirectview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redirectview.swift; sourceTree = "<group>"; };
+		3626BAAB2B621E0800D6684C /* hapticmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hapticmanager.swift; sourceTree = "<group>"; };
 		362E95402B60B7D50015E777 /* tutorialpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tutorialpage.swift; sourceTree = "<group>"; };
 		363425D72B614B560070D1B3 /* fancyprofile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fancyprofile.swift; sourceTree = "<group>"; };
 		363425D82B614B560070D1B3 /* SocialMediaListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaListView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				3601641D2B5FD4B800F11E5E /* plugin */,
 				272DFD702B5A0A8200DF5DEF /* investment-101-Info.plist */,
 				27FE1E562B2ABB6E00472FA0 /* investment_101App.swift */,
+				3626BAAB2B621E0800D6684C /* hapticmanager.swift */,
 				27FE1E7D2B2AC09C00472FA0 /* View */,
 				27FE1E5A2B2ABB7000472FA0 /* Assets.xcassets */,
 				27FE1E8D2B2AC33400472FA0 /* Constants.swift */,
@@ -195,15 +198,14 @@
 		27FE1E7D2B2AC09C00472FA0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				363425D52B614B460070D1B3 /* profile-detail */,
 				36CF756F2B60CCC300EECE3A /* Tutorial */,
 				272DFD712B5A0C3900DF5DEF /* StartView.swift */,
 				272DFD6E2B5A071500DF5DEF /* SplashScreenView.swift */,
 				27FE1E692B2ABC1300472FA0 /* MainMenuView.swift */,
 				27FE1E752B2ABCCA00472FA0 /* UnitsView.swift */,
-				362E95402B60B7D50015E777 /* tutorialpage.swift */,
 				3601649A2B5FF4C600F11E5E /* redirectview.swift */,
 				27FE1E6D2B2ABC4A00472FA0 /* ProfileViewOld.swift */,
-				363425D52B614B460070D1B3 /* profile-detail */,
 				27FE1E792B2ABD1D00472FA0 /* ProfileViewModel.swift */,
 				27FE1E732B2ABCB200472FA0 /* TopicDetailView.swift */,
 				27FE1E772B2ABCEC00472FA0 /* WebViewManager.swift */,
@@ -364,6 +366,7 @@
 		36CF756F2B60CCC300EECE3A /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				362E95402B60B7D50015E777 /* tutorialpage.swift */,
 				36CF75702B60CCD800EECE3A /* stocktutorial.swift */,
 				36CF75722B60CD3300EECE3A /* coursestutorialview.swift */,
 			);
@@ -453,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3626BAAC2B621E0800D6684C /* hapticmanager.swift in Sources */,
 				360164632B5FD4C900F11E5E /* Foundation+Extensions.swift in Sources */,
 				360164502B5FD4C900F11E5E /* Chart+Stubs.swift in Sources */,
 				3601644C2B5FD4C900F11E5E /* QuotesViewModel.swift in Sources */,
@@ -634,7 +638,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"investment 101/Preview Content\"";
-				DEVELOPMENT_TEAM = HPU2K37CYY;
+				DEVELOPMENT_TEAM = JPHY572DDX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "investment-101-Info.plist";
@@ -649,7 +653,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.3;
-				PRODUCT_BUNDLE_IDENTIFIER = "celinetsai.investment-101";
+				PRODUCT_BUNDLE_IDENTIFIER = "investment-101";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -668,7 +672,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"investment 101/Preview Content\"";
-				DEVELOPMENT_TEAM = HPU2K37CYY;
+				DEVELOPMENT_TEAM = JPHY572DDX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "investment-101-Info.plist";
@@ -683,7 +687,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.3;
-				PRODUCT_BUNDLE_IDENTIFIER = "celinetsai.investment-101";
+				PRODUCT_BUNDLE_IDENTIFIER = "investment-101";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

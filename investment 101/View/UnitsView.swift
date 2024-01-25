@@ -1,9 +1,4 @@
-//
-//  UnitsView.swift
-//  investment 101
-//
-//  Created by Celine Tsai on 25/7/23.
-//
+
 
 import SwiftUI
 

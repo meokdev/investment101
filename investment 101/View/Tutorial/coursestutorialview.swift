@@ -2,9 +2,12 @@
 
 import SwiftUI
 
+
+
+
+
 struct CourseTutorialView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var hasViewedCourseWalkthrough: Bool
     @State private var currentPage = 0
     
     let pageHeadings = [ "Welcome to Investment 101", "Interactive Learning", "Investment Lessons"]
@@ -14,12 +17,14 @@ struct CourseTutorialView: View {
     let pageImages = [ "course-tutorial-1", "course-tutorial-2", "course-tutorial-3" ]
     
     init() {
-        self._hasViewedCourseWalkthrough = State(initialValue: UserDefaults.standard.bool(forKey: "hasViewedCourseWalkthrough"))
+        
         UIPageControl.appearance().currentPageIndicatorTintColor = .gray
         UIPageControl.appearance().pageIndicatorTintColor = .lightGray
     }
     
+    
     var body: some View {
+
         VStack {
             TabView(selection: $currentPage) {
                 ForEach(pageHeadings.indices) { index in
@@ -33,6 +38,9 @@ struct CourseTutorialView: View {
             
             VStack(spacing: 20) {
                 Button(action: {
+                    
+                    HapticManager.shared.mediumFeedback()
+                    
                     if currentPage < pageHeadings.count - 1 {
                         currentPage += 1
                     } else {
@@ -50,6 +58,7 @@ struct CourseTutorialView: View {
                 }
                 if currentPage < pageHeadings.count - 1 {
                     Button(action: {
+                        HapticManager.shared.rigidFeedback()
                         UserDefaults.standard.set(true, forKey: "hasViewedCourseWalkthrough")
                         dismiss()
                     }) {

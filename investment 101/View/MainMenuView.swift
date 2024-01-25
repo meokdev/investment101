@@ -3,21 +3,18 @@
 import SwiftUI
 import XCAStocksAPI
 
-
 struct MainMenuView: View {
     @State private var selectedTab: Int = 0
     @StateObject var appVM = AppViewModel()
     
-    @State private var showCourseWalkthrough = true
-    @State private var showStockWalkthrough = true
-    
+    @State private var showCourseWalkthrough = !UserDefaults.standard.bool(forKey: "hasViewedCourseWalkthrough")
+    @State private var showStockWalkthrough = !UserDefaults.standard.bool(forKey: "hasViewedStockWalkthrough")
     var body: some View {
         
         TabView(selection: $selectedTab) {
             //courses
             NavigationStack{
                 UnitsView()
-        
             }
             .tabItem {
                 Image(systemName: "book.fill")
@@ -41,16 +38,21 @@ struct MainMenuView: View {
             .sheet(isPresented: $showStockWalkthrough) {
                 StockTutorialView()
             }
-                
+            
             .tag(1)
-            //profile view
-            profile2()
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("Profile")
-                }
-                .tag(2)
+            
+            NavigationStack{
+                //profile view
+                profile2()
+            }
+            .tabItem {
+                Image(systemName: "person.fill")
+                Text("Profile")
+            }
+            
+            .tag(2)
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

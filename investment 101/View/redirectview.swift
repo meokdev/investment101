@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct redirectview: View {
+    @AppStorage("rValue") var rValue = DefaultSettings.rValue //rgb values
+    @AppStorage("gValue") var gValue = DefaultSettings.gValue
+    @AppStorage("bValue") var bValue = DefaultSettings.bValue
     var body: some View {
+        Rectangle()
+            .foregroundColor(Color(red: rValue, green: gValue, blue: bValue, opacity: 1.0))
+            .edgesIgnoringSafeArea(.all)
+            .frame(height: 40)
         List {
             VStack{
                 NavigationLink(destination: stock_loading()) {
