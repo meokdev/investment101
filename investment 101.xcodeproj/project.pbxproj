@@ -69,6 +69,7 @@
 		363425E42B6151EB0070D1B3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363425DF2B6151EB0070D1B3 /* SettingsView.swift */; };
 		36B709242B5FD18A0046C781 /* XCAStocksAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 36B709232B5FD18A0046C781 /* XCAStocksAPI */; };
 		36B709262B5FD18A0046C781 /* XCAStocksExec in Frameworks */ = {isa = PBXBuildFile; productRef = 36B709252B5FD18A0046C781 /* XCAStocksExec */; };
+		36C5CFE42BB8201600941CF4 /* doc_retrieval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C5CFE32BB8201600941CF4 /* doc_retrieval.swift */; };
 		36CF75712B60CCD800EECE3A /* stocktutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF75702B60CCD800EECE3A /* stocktutorial.swift */; };
 		36CF75732B60CD3300EECE3A /* coursestutorialview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF75722B60CD3300EECE3A /* coursestutorialview.swift */; };
 /* End PBXBuildFile section */
@@ -136,6 +137,7 @@
 		363425D82B614B560070D1B3 /* SocialMediaListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaListView.swift; sourceTree = "<group>"; };
 		363425D92B614B560070D1B3 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		363425DF2B6151EB0070D1B3 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		36C5CFE32BB8201600941CF4 /* doc_retrieval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doc_retrieval.swift; sourceTree = "<group>"; };
 		36CF75702B60CCD800EECE3A /* stocktutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stocktutorial.swift; sourceTree = "<group>"; };
 		36CF75722B60CD3300EECE3A /* coursestutorialview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coursestutorialview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,6 +203,7 @@
 				363425D52B614B460070D1B3 /* profile-detail */,
 				36CF756F2B60CCC300EECE3A /* Tutorial */,
 				272DFD712B5A0C3900DF5DEF /* StartView.swift */,
+				36C5CFE32BB8201600941CF4 /* doc_retrieval.swift */,
 				272DFD6E2B5A071500DF5DEF /* SplashScreenView.swift */,
 				27FE1E692B2ABC1300472FA0 /* MainMenuView.swift */,
 				27FE1E752B2ABCCA00472FA0 /* UnitsView.swift */,
@@ -283,8 +286,9 @@
 				3601642E2B5FD4C900F11E5E /* Stubs.swift */,
 				3601642F2B5FD4C900F11E5E /* MockStocksAPI.swift */,
 			);
-			path = "Mocks & Stubs";
-			sourceTree = "<group>";
+			name = "Mocks & Stubs";
+			path = "investment 101/plugin/Mocks & Stubs";
+			sourceTree = SOURCE_ROOT;
 		};
 		360164322B5FD4C900F11E5E /* Views */ = {
 			isa = PBXGroup;
@@ -405,7 +409,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					27FE1E522B2ABB6E00472FA0 = {
 						CreatedOnToolsVersion = 14.3;
@@ -487,6 +491,7 @@
 				360164612B5FD4C900F11E5E /* ChartRange+Extensions.swift in Sources */,
 				3601645A2B5FD4C900F11E5E /* EmptyStateView.swift in Sources */,
 				360164492B5FD4C900F11E5E /* FetchPhase.swift in Sources */,
+				36C5CFE42BB8201600941CF4 /* doc_retrieval.swift in Sources */,
 				27FE1E632B2ABB7000472FA0 /* investment_101.xcdatamodeld in Sources */,
 				27FE1E782B2ABCEC00472FA0 /* WebViewManager.swift in Sources */,
 				3601644F2B5FD4C900F11E5E /* AppViewModel.swift in Sources */,
@@ -552,6 +557,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -612,6 +618,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

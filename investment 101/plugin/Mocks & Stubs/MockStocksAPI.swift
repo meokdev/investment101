@@ -2,13 +2,11 @@
 //  MockStocksAPI.swift
 //  StocksApp
 //
-//  Created by Alfian Losari on 01/10/22.
 //
 
 import Foundation
 import XCAStocksAPI
 
-#if DEBUG
 struct MockStocksAPI: StocksAPI {
     
     var stubbedSearchTickersCallback: (() async throws -> [Ticker])!
@@ -27,4 +25,3 @@ struct MockStocksAPI: StocksAPI {
     }
     
 }
-#endif
