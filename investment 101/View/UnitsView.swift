@@ -1,4 +1,9 @@
-
+//
+//  UnitsView.swift
+//  investment 101
+//
+//  Created by Celine Tsai on 25/7/23.
+//
 
 import SwiftUI
 
@@ -25,7 +30,7 @@ struct Topic: Identifiable, Hashable {
     let name: String
     let articleURL: URL // HTML file path in Downloads folder without extension
     let questions: [Question]
-    let img_id: String
+    let imgID: String
 }
 
 
@@ -42,21 +47,27 @@ struct UnitsView: View {
     
     let units: [String: [Topic]] = [
         K.unit1: [
-            Topic(id: 1, name: K.topic11, articleURL: K.article11URL, questions: K.quiz11, img_id: "img1"),
-            Topic(id: 2, name: K.topic12, articleURL: K.article12URL, questions: K.quiz12, img_id: "img2")
+            Topic(id: 1, name: K.topic11, articleURL: K.article11URL, questions: K.quiz11, imgID: "img1"),
+            Topic(id: 2, name: K.topic12, articleURL: K.article12URL, questions: K.quiz12, imgID: "img2")
         ],
         K.unit2: [
-            Topic(id: 3, name: K.topic21, articleURL: K.article21URL, questions: K.quiz21, img_id: "img3"),
-            Topic(id: 4, name: K.topic22, articleURL: K.article22URL, questions: K.quiz22, img_id: "img4"),
-            Topic(id: 5, name: K.topic23, articleURL: K.article23URL, questions: K.quiz23, img_id: "img5"),
-            Topic(id: 6, name: K.topic24, articleURL: K.article24URL, questions: K.quiz24, img_id: "img6")
+            Topic(id: 3, name: K.topic21, articleURL: K.article21URL, questions: K.quiz21, imgID: "img3"),
+            Topic(id: 4, name: K.topic22, articleURL: K.article22URL, questions: K.quiz22, imgID: "img4"),
+            Topic(id: 5, name: K.topic23, articleURL: K.article23URL, questions: K.quiz23, imgID: "img5"),
+            Topic(id: 6, name: K.topic24, articleURL: K.article24URL, questions: K.quiz24, imgID: "img6"),
+            Topic(id: 7, name: K.topic25, articleURL: K.article25URL, questions: K.quiz25, imgID: "img7"),
+            Topic(id: 8, name: K.topic26, articleURL: K.article26URL, questions: K.quiz26, imgID: "img8")
+
         ]
             // Add more units here
     ]
     var body: some View {
         VStack {
-            topbar_1() //2 different topbar() and topbar_1() for variation.
-            
+            Text("Units")
+                .font(.title)
+                .bold()
+                .padding(.all)
+                
             List {
                 ForEach(units.keys.sorted(), id: \.self) { unit in
                     
@@ -75,40 +86,6 @@ struct UnitsView: View {
     }
 }
 
-struct topbar_1: View{
-    var body: some View{
-        HStack{
-            Image("inapp_icon")
-                .resizable()
-                .frame(width:60, height:60)
-            
-        }
-    }
-}
-
-struct topbar: View{
-    var body: some View{
-        HStack{
-            Image("inapp_icon")
-                .resizable()
-                .frame(width:60, height:60)
-            Spacer()
-            VStack(alignment: .leading){
-                Text("Units")
-                    .font(.title)
-                    .bold()
-                    .padding(.all)
-            }
-            Spacer()
-            Image("")
-                .resizable()
-                .frame(width:60, height:60)
-            
-        }
-    }
-}
-
-
     
 struct TopicItemView: View {
     var topic: Topic // Replace TopicType with your actual type
@@ -121,7 +98,7 @@ struct TopicItemView: View {
             
             NavigationLink(destination: TopicDetailView(topic: topic)) {
                 HStack {
-                    let img = topic.img_id
+                    let img = topic.imgID
                     Image(img)
                         .resizable()
                         .frame(width:80, height:80)

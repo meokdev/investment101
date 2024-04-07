@@ -42,11 +42,11 @@ struct TutorialPage: View {
 
 
 
-struct TutorialView_Previews: PreviewProvider {
-    static var previews: some View {
-        StockTutorialView()
-        
-        TutorialPage(image: "onboarding-1", heading: "TITLE", subHeading: "the description goes here")
-            .previewLayout(.sizeThatFits)
-    }
-}
+//struct TutorialView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CourseTutorialView()
+//        
+//        TutorialPage(image: "onboarding-1", heading: "TITLE", subHeading: "the description goes here")
+//            .previewLayout(.sizeThatFits)
+//    }
+//}

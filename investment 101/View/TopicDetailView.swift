@@ -97,7 +97,7 @@ struct WebView: UIViewRepresentable {
 
 struct TopicDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        let sampleTopic = Topic(id: 3, name: K.unit3, articleURL: K.article21URL, questions: K.quiz21, img_id: "img1")
+        let sampleTopic = Topic(id: 3, name: K.unit3, articleURL: K.article21URL, questions: K.quiz21, imgID: "img3")
         return TopicDetailView(topic: sampleTopic)
     }
 }

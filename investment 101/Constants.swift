@@ -28,10 +28,8 @@ struct K {
     static let topic22 = "Evaluating Company Financials: Income Statements"
     static let topic23 = "Evaluating Company Financials: Balance Sheet"
     static let topic24 = "Evaluating Company Financials: Cash Flow Statement"
-    
-    static let testdesc = "testdescription"
-    
-    
+    static let topic25 = "Understanding Financial Ratios and Company Advantages"
+    static let topic26 = "Understanding Stock Quotes"
     
     static let quiz11 = [
         Question(q: "What is the primary function of the stock market?", a: ["Facilitating the transfer of ownership in publicly traded companies", "Providing a platform for companies to raise debt capital", "Allowing investors to participate in private equity investments", "Facilitating the trading the commodities and futures"], correctAnswer: "Facilitating the transfer of ownership in publicly traded companies"),
@@ -98,25 +96,62 @@ struct K {
         Question(q: "What does dividend distribution reflect?", a: ["Company's commitment to reducing cash flow", "Company's commitment to managing debt", "Company's financial health and return to shareholders", "Company's focus on increasing working capital"], correctAnswer: "Company's financial health and return to shareholders"),
         Question(q: "Why is a comprehensive analysis of cash flow important?", a: ["To ensure high cash flow", "To assess investment strategies", "To increase inventory levels", "To avoid dividend payments"], correctAnswer: "To assess investment strategies")
     ]
+    
+    static let quiz25 = [
+        Question(q: "What does the Gross Profit Margin ratio indicate about a company's financial health?",a: ["Percentage of revenue exceeding the cost of goods sold","Ability to cover short-term obligations with current assets","Profitability of core operations",  "Proportion of debt used to finance assets"  ], correctAnswer: "Percentage of revenue exceeding the cost of goods sold"  ),
+        
+        Question(q: "Where can investors find financial reports to review a company's financial ratios?",  a: ["Social media platforms",  "Official website's investor relations section", "Entertainment websites",   "Health and wellness blogs"],  correctAnswer: "Official website's investor relations section" ),
+        
+        Question(q: "What does the Quick Ratio measure?", a: [ "Profitability of core operations",  "Ability to meet short-term liabilities without relying on inventory sale", "Percentage of revenue exceeding the cost of goods sold",  "Proportion of debt used to finance assets"],  correctAnswer: "Ability to meet short-term liabilities without relying on inventory sale"),
+        
+        Question(q: "What does Return on Equity (ROE) evaluate?",  a: [  "Company's ability to cover interest expenses", "Ability to manage production costs effectively",  "Generation of returns on shareholders' equity", "Competitive advantage in the market"], correctAnswer: "Generation of returns on shareholders' equity"),
+        
+        Question(
+            q: "Where is information about a company's management team typically found?", a: ["Investor relations section of the official website", "Health and fitness magazines", "Cooking blogs", "Entertainment news websites"], correctAnswer: "Investor relations section of the official website"),
+        
+        Question(q: "What is a competitive advantage in fundamental analysis?", a: ["Ability to cover short-term obligations with current assets", "A unique strength that sets a company apart from competitors", "Profitability of core operations", "Proportion of debt used to finance assets"], correctAnswer: "A unique strength that sets a company apart from competitor"),
+        
+        Question(q: "Why is evaluating the management team crucial in fundamental analysis?", a: ["To assess the company's liquidity", "To understand the company's competitive position", "To evaluate strategic decisions and execution", "To measure the debt-to-equity ratio"], correctAnswer: "To evaluate strategic decisions and execution"),
+        
+        Question(q: "What does the Debt-to-Equity Ratio show?", a: ["Ability to cover interest expenses", "Percentage of revenue exceeding the cost of goods sold", "Proportion of debt used to finance assets relative to shareholders' equity", "Ability to meet short-term liabilities without relying on inventory sale"],correctAnswer: "Proportion of debt used to finance assets relative to shareholders' equity")
+    ]
+
+    static let quiz26 = [
+        Question(q: "What does the 'Open' in a stock quote represent?",  a: ["The highest price a buyer is willing to pay", "The closing value of the stock in the last trading session", "The initial price level at the beginning of the trading day", "The lowest price a seller is willing to accept"], correctAnswer: "The initial price level at the beginning of the trading day"),
+
+        Question(q: "How is the 'Day Range' calculated?", a: ["By multiplying the current stock price by the number of outstanding shares","By calculating the difference between the lowest and highest prices", "By expressing the dividend yield as a percentage", "By measuring a stock's volatility compared to a benchmark index"], correctAnswer: "By calculating the difference between the lowest and highest prices"),
+
+        Question(q: "What does 'Beta (5Y Monthly)' measure?",a: ["A stock's volatility in relation to the market",
+                "The ratio of a company's share price to its earnings per share", "The portion of a company's profit allocated to each outstanding share", "The difference between the lowest and highest prices at which a stock has traded"],  correctAnswer: "A stock's volatility in relation to the market"),
+
+        Question(q: "What does 'Ex-Dividend Date' signify?", a: ["The date on which a company is scheduled to release its financial results", "The date a stock is traded without a previously declared dividend", "The average number of shares traded daily", "The total market value of a company's outstanding shares"], correctAnswer: "The date a stock is traded without a previously declared dividend"),
+
+        Question(q: "How does 'PE Ratio' (Price-to-Earnings Ratio) help investors?", a: ["By measuring a stock's volatility compared to a benchmark index", "By expressing the dividend yield as a percentage", "By reflecting the market's expectations for a company's future earnings growth", "By calculating the difference between the lowest and highest prices"],
+            correctAnswer: "By reflecting the market's expectations for a company's future earnings growth"),
+
+        Question(q: "What is the significance of 'Avg. Volume' in a stock quote?", a: ["To determine eligibility for receiving upcoming dividends", "To indicate the company's dividend policy and yield", "To provide insight into a company's profitability on a per-share basis", "To offer a smoothed-out view of a stock's trading activity"], correctAnswer: "To offer a smoothed-out view of a stock's trading activity"),
+
+        Question(q: "Why is the '52-week Range' important for investors?", a: ["To provide insight into a company's profitability on a per-share basis", "To determine eligibility for receiving upcoming dividends",  "To reflect the overall value of the company in the stock market", "To offer a broader perspective on a stock's performance"], correctAnswer: "To offer a broader perspective on a stock's performance"),
+
+        Question(q: "What does 'Forward Dividend & Yield' reveal?", a: ["The lowest price a seller is willing to accept for a stock", "The average number of shares traded daily", "The estimated annual dividend payment per share and the dividend yield","The closing value of the stock in the last trading session"], correctAnswer: "The estimated annual dividend payment per share and the dividend yield")
+    ]
 
 
 
     static let article11path = Bundle.main.path(forResource: "article11", ofType: "html")
     static let article11URL = URL(fileURLWithPath: article11path!)
-    
     static let article12path = Bundle.main.path(forResource: "article12", ofType: "html")
     static let article12URL = URL(fileURLWithPath: article12path!)
-    
     static let article21path = Bundle.main.path(forResource: "article21", ofType: "html")
     static let article21URL = URL(fileURLWithPath: article21path!)
-    
     static let article22path = Bundle.main.path(forResource: "article22", ofType: "html")
     static let article22URL = URL(fileURLWithPath: article22path!)
-    
     static let article23path = Bundle.main.path(forResource: "article23", ofType: "html")
     static let article23URL = URL(fileURLWithPath: article23path!)
-    
     static let article24path = Bundle.main.path(forResource: "article24", ofType: "html")
     static let article24URL = URL(fileURLWithPath: article24path!)
-
+    static let article25path = Bundle.main.path(forResource: "article25", ofType: "html")
+    static let article25URL = URL(fileURLWithPath: article25path!)
+    static let article26path = Bundle.main.path(forResource: "article26", ofType: "html")
+    static let article26URL = URL(fileURLWithPath: article26path!)
 }

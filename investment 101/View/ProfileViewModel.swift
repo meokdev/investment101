@@ -38,7 +38,7 @@ class ProfileViewModel: ObservableObject {
 extension UserDefaults {
     static var namePresented: String {
         get {
-            return UserDefaults.standard.string(forKey: "name") ?? "Default User" // Set a default value
+            return UserDefaults.standard.string(forKey: "name") ?? "" // Set a default value
         }
         set {
             UserDefaults.standard.set(newValue, forKey: "name")
